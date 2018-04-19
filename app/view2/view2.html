@@ -3,3 +3,11 @@
   Showing of 'interpolate' filter:
   {{ 'Current version is v%VERSION%.' | interpolate }}
 </p>
+<div>
+	<h3>Input Validation</h3>
+	<form ng-app="" name="myForm">
+	    Email:
+	    <input type="email" name="myAddress" ng-model="text">
+	    <span ng-show="myForm.myAddress.$error.email">Invalid email address!</span>
+	</form>
+</div>
