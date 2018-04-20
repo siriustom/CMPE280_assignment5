@@ -19,4 +19,11 @@ angular.module('myApp.view2', ['ngRoute'])
         {name:'Hege',country:'Sweden'},
         {name:'Kai',country:'Denmark'}
     ];
-});
+})
+
+
+.controller('myCtrl', function($scope, $location)
+{
+    $scope.myUrl = $location.absUrl();
+})
+
