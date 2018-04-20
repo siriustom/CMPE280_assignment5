@@ -5,10 +5,11 @@
 </p>
 <div>
 	<h3>Input Validation</h3>
-	<form ng-app="" name="myForm">
+	<form ng-app="" name="myForm" ng-controller="submit">
 	    Email:
 	    <input type="email" name="myAddress" ng-model="text">
 	    <span ng-show="myForm.myAddress.$error.email">Invalid email address!</span>
+        <input ng-click="myFunc($event)" type="submit" value="Submit">
 	</form>
 </div>
 

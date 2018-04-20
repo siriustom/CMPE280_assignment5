@@ -20,6 +20,11 @@ angular.module('myApp.view2', ['ngRoute'])
         {name:'Kai',country:'Denmark'}
     ];
 })
+    .controller('submit', function($scope) {
+      $scope.myFunc = function() {
+        alert("You have submitted.");
+      }
+    })
 
 
 .controller('myCtrl', function($scope, $location)
