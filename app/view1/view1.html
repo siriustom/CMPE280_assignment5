@@ -1,1 +1,22 @@
-<p>This is the partial for view 1.</p>
+
+<body>
+    <p>This is the SPA built using Angular JS by group Gang of Four</p>
+    <div ng-app="" ng-init="names=[
+        {name:'Weiyu Jin',SJSUID:'011824657'},
+        {name:'Mutian Wang',SJSUID:'011824657'},
+        {name:'Ruifeng Sheng',SJSUID:'011824657'},
+        {name:'Xiaoran Lin',SJSUID:'011824657'}]">
+        
+            <h1>Feature 1: Repeating elements</h1>
+            <table border='1'>
+                <tr>
+                    <th>Name</th>
+                    <th>SJSUID</th>
+                </tr>
+                <tr ng-repeat="x in names">
+                    <td> {{ x.name }} </td>
+                    <td> {{ x.SJSUID }} </td>
+                </tr>
+            </table>
+        </div>
+</body>
