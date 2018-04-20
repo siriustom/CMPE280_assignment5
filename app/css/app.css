@@ -27,3 +27,8 @@
 .viewDiv {
   margin: 10px
 }
+
+.flexDiv {
+  display: flex;
+  flex-direction: column;
+}

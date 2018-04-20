@@ -1,30 +1,38 @@
 <body>
-<div class="viewDiv">
-    <p>This is the SPA built using Angular JS by group Gang of Four</p>
+    <div class="viewDiv">
+        <p>This is the SPA built using Angular JS by group Gang of Four</p>
+        <div ng-app="" ng-init="names=[
+            {name:'Weiyu Jin',SJSUID:'011819756'},
+            {name:'Mutian Wang',SJSUID:'011548667'},
+            {name:'Ruifeng Sheng',SJSUID:'011834004'},
+            {name:'Xiaoran Lin',SJSUID:'011824657'}]">
+                <h3>Repeating elements: group member information</h3>
+                <table border='1'>
+                    <tr>
+                        <th>Name</th>
+                        <th>SJSUID</th>
+                    </tr>
+                    <tr ng-repeat="x in names">
+                        <td> {{ x.name }} </td>
+                        <td> {{ x.SJSUID }} </td>
+                    </tr>
+                </table>
+        </div>
 
-    <div ng-app="myApp" ng-controller="myCtrl">
-        Dish Name <input ng-model="name">
-        <h1>Your Dish Name: {{name}}</h1>
-    </div>
-
-    <div ng-app="" ng-init="names=[
-        {name:'Weiyu Jin',SJSUID:'011819756'},
-        {name:'Mutian Wang',SJSUID:'011548667'},
-        {name:'Ruifeng Sheng',SJSUID:'011834004'},
-        {name:'Xiaoran Lin',SJSUID:'011824657'}]">
-        
-            <h3>Repeating elements: group member information</h3>
-            <table border='1'>
-                <tr>
-                    <th>Name</th>
-                    <th>SJSUID</th>
-                </tr>
-                <tr ng-repeat="x in names">
-                    <td> {{ x.name }} </td>
-                    <td> {{ x.SJSUID }} </td>
-                </tr>
-            </table>
-    </div>
+        <div ng-app="myApp" ng-controller="addDish" class="viewDiv flexDiv">
+            <div >
+                Dish Name <input ng-change="changeText()" ng-model="name">
+                <h1>Your Dish Name: {{name}}</h1>
+                <input ng-click="submitDish($event)" type="submit" value="Submit" ng-model="name">
+            </div>
+            <div >
+                <ul >
+                    <li ng-repeat="x in dish" >
+                        {{ x }}
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 

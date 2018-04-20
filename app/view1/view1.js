@@ -13,6 +13,13 @@ angular.module('myApp.view1', ['ngRoute'])
 
 }])
 // set initial value
-.controller('myCtrl', function($scope){
-	$scope.name = "lol"
+.controller('addDish', function($scope){
+	$scope.name = '';
+	$scope.dish = [];
+    $scope.changeText = function($event) {
+        $scope.name = $event.target.value;
+    }
+    $scope.submitDish = function () {
+        $scope.dish.push($scope.name);
+    }
 });
